@@ -1,6 +1,6 @@
 const content = document.querySelector('.content');
    function makeGrid(row,col) {
-    if(row>64 && col>64)return alert('too big');
+    if(row>100 && col>100)return alert('too big');
     content.setAttribute('style',
     `grid-template-columns: repeat(${col}, 4fr);
     grid-template-rows: repeat(${row}, 4fr);`);
@@ -12,7 +12,7 @@ const content = document.querySelector('.content');
         let divCreate = document.createElement('div');
         divCreate.classList.add('box');
         divCreate.addEventListener('mouseenter',(event) => {
-            event.target.style.backgroundColor = 'red';
+            event.target.style.backgroundColor = `rgb(${Math.random()*256},${Math.random()*256},${Math.random()*256})`;
         })
         content.appendChild(divCreate);
 

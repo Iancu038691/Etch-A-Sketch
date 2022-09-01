@@ -3,8 +3,8 @@ body {
     align-items: center;
 }
 .content {
-    width: 575px;
-    height: 575px;
+    width: 700px;
+    height: 700px;
       display: inline-grid;
 
       
@@ -24,4 +24,6 @@ body {
 .btn {
     width: 150px;
     height: 30px;
+    color: rgb(252,0,250);
 }
+
