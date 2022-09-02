@@ -6,16 +6,15 @@ const content = document.querySelector('.content');
     grid-template-rows: repeat(${row}, 4fr);`);
     
     for(let i = 0 ; i<row*col; i++)
-    {   
-        
-        
+    {   let  getDarker = 1;
         let divCreate = document.createElement('div');
         divCreate.classList.add('box');
         divCreate.addEventListener('mouseenter',(event) => {
-            event.target.style.backgroundColor = `rgb(${Math.random()*256},${Math.random()*256},${Math.random()*256})`;
+            
+            event.target.style.backgroundColor = `rgb(${255*getDarker},${255*getDarker},${getDarker*255})`;
+            getDarker -=1/10;
         })
         content.appendChild(divCreate);
-
     }    
    }
 
